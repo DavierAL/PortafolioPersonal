@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./FormationItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Abril 2022 - Presente",
+    title: "Sofware Development - Instituto San Ignacio de Loyola",
+    description:
+      "He adquirido conocimientos fundamentales y habilidades prácticas esenciales para la industria del desarrollo de software.",
+  },
+  {
+    date: "Marzo 2023 - Octubre 2023",
+    title: "Backend Developer - ONE Program of Oracle",
+    description:
+      "Me formé como Backend Developer, destacando en Business Agility (Scrum/Kanban), Java y Spring Boot. Este periodo fortaleció mis habilidades técnicas y soft skills, preparándome para contribuir eficientemente en proyectos de desarrollo.",
+  },
+  {
+  date: "Septiembre 2023 - Noviembre 2023",
+    title: "React (Hooks, MERN), Certificación Udemy",
+    description:
+      "Consolidé habilidades clave en el desarrollo de aplicaciones web modernas. Me enfoqué en React con Hooks y el stack MERN, adquiriendo conocimientos prácticos y obteniendo una certificación reconocida. Listo para aplicar estos conocimientos en proyectos del mundo real.",
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-5">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
