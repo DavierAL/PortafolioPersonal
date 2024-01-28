@@ -8,12 +8,18 @@ import Mail from "../components/icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Formation from "../components/Formation.astro";
-import BooksIcon from "../components/icons/BooksIcon.astro"
-import Footer from "../components/Footer.astro"
+import BooksIcon from "../components/icons/BooksIcon.astro";
+import Footer from "../components/Footer.astro";
+import Java from "../components/icons/Java.astro";
+import Js from "../components/icons/Js.astro";
+import LogoAstro from "../components/icons/LogoAstro.astro";
+import React from "../components/icons/React.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import Skills from "../components/icons/Skills.astro";
 ---
 
 <Layout
-  title="Porfolio de Davier - Desarrollador y Programador Web"
+  title="Portfolio de Davier - Desarrollador y Programador Web"
   description=""
 >
   <main class="px-4">
@@ -38,31 +44,93 @@ import Footer from "../components/Footer.astro"
         >
       </h2>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/davierdev/">
-          <LinkedInd class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/DavierAL">
-          <GitHub class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/davierdev/">
-          <Mail class="size-4 md:size-6" />
-          davierlopez18dl@gmail.com
-        </SocialPill>
+      <nav
+        class="grid min-[320px]:grid-cols-2 sm:grid-cols-[17%_16%_38%] gap-4 mt-8"
+      >
+        <div class="one">
+          <SocialPill href="https://www.linkedin.com/in/davierdev/">
+            <LinkedInd class="size-3 md:size-5" />
+            LinkedIn
+          </SocialPill>
+        </div>
+        <div class="one">
+          <SocialPill href="https://github.com/DavierAL">
+            <GitHub class="size-3 md:size-5" />
+            GitHub
+          </SocialPill>
+        </div>
+        <div class="two">
+          <SocialPill href="mailto:davierlopez18dl@gmail.com">
+            <Mail class="size-3 md:size-5" />
+            davierlopez18dl@gmail.com
+          </SocialPill>
+        </div>
       </nav>
     </SectionContainer>
 
     <SectionContainer id="formation">
-      <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
-        <BooksIcon class="size-7"/>
+      <h2 class="text-2xl font-semibold flex gap-x-3 items-center mb-8">
+        <BooksIcon class="size-7" />
         Formación
       </h2>
-      <Formation>
-
-      </Formation>
+      <Formation />
     </SectionContainer>
 
+    <SectionContainer id="Skills">
+      <h2 class="text-2xl font-semibold mb-14 flex gap-x-3 items-center">
+        <Skills class="size-7" />
+        Skills
+      </h2>
+
+      <div
+        class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+      >
+        <ul
+          class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        >
+          <li>
+            <Js class="logoCa " />
+          </li>
+          <li>
+            <React class="logoCa" />
+          </li>
+          <li>
+            <Java class="logoCa"/>
+          </li>
+          <li>
+            <Tailwind class="logoCa" />
+          </li>
+          <li>
+            <GitHub class="logoCa" />
+          </li>
+          <li>
+            <LogoAstro class="logoCa" />
+          </li>
+        </ul>
+        <ul
+          class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+          aria-hidden="true"
+        >
+          <li>
+            <Js class="logoCa" />
+          </li>
+          <li>
+            <React class="logoCa" />
+          </li>
+          <li>
+            <Java class="logoCa" />
+          </li>
+          <li>
+            <Tailwind class="logoCa" />
+          </li>
+          <li>
+            <GitHub class="logoCa" />
+          </li>
+          <li>
+            <LogoAstro class="logoCa" />
+          </li>
+        </ul>
+      </div>
+    </SectionContainer>
   </main>
 </Layout>
